@@ -13,6 +13,11 @@ public class Test1 {
 //		Book book = context.getBean("book", Book.class);
 		uniLibrary.getBook();
 		uniLibrary.getMagazine();
+		System.out.println();
+		uniLibrary.returnBook();
+		uniLibrary.returnMagazine();
+		System.out.println();
+		uniLibrary.addBook();
 
 //		SchoolLibrary schoolLibrary = context.getBean("schoolLibrary", SchoolLibrary.class);
 //		schoolLibrary.getBook();
