@@ -1,7 +1,10 @@
 package com.example.Aop.aspects;
 
+import com.example.Aop.Book;
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -44,9 +47,28 @@ public class LoggingAspect {
 //    }
 
 
-    @Before("com.example.Aop.aspects.MyPointcuts.allGetMethod()") //(*) любой один параметр (..) любое количестов параметров
-    public void beforeGetLoggingAdvice(){
-        System.out.println("beforeGetLoggingAdvice: Log of trying get book or magazine");
+    @Before("com.example.Aop.aspects.MyPointcuts.allAddMethod()") //(*) любой один параметр (..) любое количестов параметров
+    public void beforeAddLoggingAdvice(JoinPoint joinPoint){
+        MethodSignature signature = (MethodSignature) joinPoint.getSignature();
+        System.out.println("Method signature = "+signature);
+        System.out.println("Get method = "+signature.getMethod());
+        System.out.println("Get return type = "+signature.getReturnType());
+        System.out.println("Get name = "+signature.getName());
+        if (signature.getName().equals("addBook")){
+            Object[] objects = joinPoint.getArgs();
+            for (Object obj: objects){
+                if (obj instanceof Book){
+                    Book book = (Book) obj;
+                    System.out.println(book);
+                }else if (obj instanceof String){
+                    String name = (String) obj;
+                    System.out.println(name);
+                }
+            }
+        }
+
+        System.out.println("beforeAddLoggingAdvice: Log of trying get book or magazine");
+        System.out.println("---------------------------------------");
     }
 
 
