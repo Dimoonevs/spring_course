@@ -19,6 +19,8 @@ public class University {
         students.add(st3);
     }
     public List<Student> getStudents(){
+        System.out.println("START POINT");
+        System.out.println(students.get(3));
         System.out.println("Info from method getStudents");
         System.out.println(students);
         return students;
