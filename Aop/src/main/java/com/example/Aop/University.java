@@ -17,10 +17,11 @@ public class University {
         students.add(st1);
         students.add(st2);
         students.add(st3);
+        System.out.println("Add new students");
     }
     public List<Student> getStudents(){
         System.out.println("START POINT");
-        System.out.println(students.get(3));
+//        System.out.println(students.get(3));
         System.out.println("Info from method getStudents");
         System.out.println(students);
         return students;
