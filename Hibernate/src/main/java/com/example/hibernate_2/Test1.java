@@ -1,7 +1,7 @@
 package com.example.hibernate_2;
 
-import com.example.hibernate_2.entyti.Detail;
-import com.example.hibernate_2.entyti.Employee;
+import com.example.hibernate_2.entity.Detail;
+import com.example.hibernate_2.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

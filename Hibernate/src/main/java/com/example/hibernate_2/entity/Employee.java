@@ -1,4 +1,4 @@
-package com.example.hibernate_2.entyti;
+package com.example.hibernate_2.entity;
 
 import jakarta.persistence.*;
 
