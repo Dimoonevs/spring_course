@@ -16,9 +16,10 @@ public class NewLoggingAspect {
 
             targetMethodResult = proceedingJoinPoint.proceed();
         }catch (Exception e){
-            System.out.println("aroundReturnBookAdvice: we catch exception: " + e);
+            System.out.println("aroundRetaurnBookAdvice: we catch exception: " + e);
 //            targetMethodResult = "Unknown name books";
             throw e;
+
         }
 //        targetMethodResult = "New books";
         System.out.println("aroundReturnBookAdvice: Logging End");
