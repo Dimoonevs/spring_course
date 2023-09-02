@@ -10,6 +10,6 @@
 <body>
     <h2>I will be java developer!</h2>
 
-    <a href="/askDetails"> For enter your name</a>
+    <a href="/employee/askDetails"> For enter your name</a>
 </body>
 </html>

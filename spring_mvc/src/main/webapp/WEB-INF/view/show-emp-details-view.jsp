@@ -11,9 +11,9 @@
 <h2 style="margin-bottom: 15px">Dear Employee, you are WELCOME!!!</h2>
 
 <div style="display: flex; flex-direction: column">
-    <p style="margin-bottom: 15px">Your name: ${param.employeeName}</p>
+    <p style="margin-bottom: 15px">Your name: ${nameAttribute}</p>
 
-    <a href="/">HOME</a>
+    <a href="/employee/">HOME</a>
 </div>
 
 
