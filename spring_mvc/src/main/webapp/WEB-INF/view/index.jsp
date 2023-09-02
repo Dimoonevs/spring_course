@@ -8,7 +8,7 @@
     <title>index</title>
 </head>
 <body>
-    <h2>I will be java developer!</h2>
+    <h2 style="margin-bottom: 30px">I will be java developer!</h2>
 
     <a href="/employee/askDetails"> For enter your name</a>
 </body>

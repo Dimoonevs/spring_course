@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-<h2 style="margin-bottom: 15px">Dear Employee, Please enter your details</h2>
+<h2 style="margin-bottom: 30px">Dear Employee, Please enter your details</h2>
 
 
 <form:form action="showDetails" modelAttribute="employee">
@@ -18,14 +18,17 @@
         <div class="inputs">
             <span>Name</span>
             <form:input path="name"/>
+            <form:errors path="name" cssClass="errors" />
         </div>
         <div class="inputs">
             <span>Surname</span>
             <form:input path="surname"/>
+            <form:errors path="surname" cssClass="errors"/>
         </div>
         <div class="inputs">
             <span>Salary</span>
             <form:input path="salary"/>
+            <form:errors path="salary" cssClass="errors"/>
         </div>
         <div class="inputs">
             <span>Department</span>
@@ -41,6 +44,17 @@
             <span>Foreign Languages</span>
             <form:checkboxes path="languages" items="${employee.languageList}"/>
         </div>
+        <div class="inputs">
+            <span>Phone number</span>
+            <form:input path="phoneNumber" />
+            <form:errors path="phoneNumber" cssClass="errors"/>
+        </div>
+        <div class="inputs">
+            <span>Email</span>
+            <form:input path="email" />
+            <form:errors path="email" cssClass="errors"/>
+        </div>
+
 
         <button type="submit">Submit</button>
     </div>
@@ -53,6 +67,9 @@
     }
     button{
         max-width: 100px;
+    }
+    .errors{
+        color: red;
     }
 </style>
 

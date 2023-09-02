@@ -1,4 +1,3 @@
-<%--<%@ taglib prefix="coponent" uri="http://java.sun.com/jstl/core_rt" %>--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
@@ -10,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-<h2 style="margin-bottom: 15px">Dear Employee, you are WELCOME!!!</h2>
+<h2 style="margin-bottom: 30px">Dear Employee, you are WELCOME!!!</h2>
 
 <div style="display: flex; flex-direction: column">
     <p style="margin-bottom: 15px">Your name: ${employee.name}</p>
@@ -20,11 +19,14 @@
     <p style="margin-bottom: 15px">Your car: ${employee.carBrand}</p>
     <p style="margin-bottom: 15px">Your languages:</p>
 
-        <ul>
+        <ul style="margin-bottom: 15px">
             <c:forEach var="lang" items="${employee.languages}">
                 <li> ${lang}</li>
             </c:forEach>
         </ul>
+
+    <p style="margin-bottom: 15px">Your phone: ${employee.phoneNumber}</p>
+    <p style="margin-bottom: 15px">Your phone: ${employee.email}</p>
 
 
     <a href="/employee/">HOME</a>
