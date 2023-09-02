@@ -5,11 +5,18 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>index</title>
+    <title>Document</title>
 </head>
 <body>
-    <h2>I will be java developer!</h2>
+<h2 style="margin-bottom: 15px">Dear Employee, Please enter your details</h2>
 
-    <a href="/askDetails"> For enter your name</a>
+
+<form action="showDetails" method="get">
+    <input type="text" name="employeeName"
+    placeholder="Write your name"/>
+
+    <button type="submit">SEND YOR NAME</button>
+</form>
+
 </body>
 </html>

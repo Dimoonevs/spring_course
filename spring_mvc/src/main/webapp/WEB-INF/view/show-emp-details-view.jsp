@@ -5,11 +5,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>index</title>
+    <title>Document</title>
 </head>
 <body>
-    <h2>I will be java developer!</h2>
+<h2 style="margin-bottom: 15px">Dear Employee, you are WELCOME!!!</h2>
 
-    <a href="/askDetails"> For enter your name</a>
+<div style="display: flex; flex-direction: column">
+    <p style="margin-bottom: 15px">Your name: ${param.employeeName}</p>
+
+    <a href="/">HOME</a>
+</div>
+
+
 </body>
 </html>
