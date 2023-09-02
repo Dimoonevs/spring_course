@@ -1,10 +1,9 @@
 package com.spring.mvc;
 
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -15,18 +14,16 @@ public class MyController {
         return "index";
     }
     @RequestMapping("/askDetails")
-    public String askEmployeeDetails(){
+    public String askEmployeeDetails(Model model){
+        model.addAttribute("employee", new Employee());
         return "ask-emp-details-view";
     }
     @RequestMapping("/showDetails")
-    public String showEmployeeDetails(@RequestParam("employeeName") String empName,
-                                      Model model){
-
-
-
-        empName = "Mr. " + empName + " !";
-        model.addAttribute("nameAttribute", empName);
-
+    public String showEmployeeDetails(@ModelAttribute("employee") Employee employee){
+        String name = employee.getName();
+        employee.setName("Mr. " + name);
+        String department = employee.getDepartment();
+        employee.setDepartment(department + " =)");
         return "show-emp-details-view";
     }
 

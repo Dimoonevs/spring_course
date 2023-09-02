@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,12 +12,49 @@
 <h2 style="margin-bottom: 15px">Dear Employee, Please enter your details</h2>
 
 
-<form action="showDetails" method="get">
-    <input type="text" name="employeeName"
-    placeholder="Write your name"/>
+<form:form action="showDetails" modelAttribute="employee">
 
-    <button type="submit">SEND YOR NAME</button>
-</form>
+    <div style="display: flex;flex-direction: column">
+        <div class="inputs">
+            <span>Name</span>
+            <form:input path="name"/>
+        </div>
+        <div class="inputs">
+            <span>Surname</span>
+            <form:input path="surname"/>
+        </div>
+        <div class="inputs">
+            <span>Salary</span>
+            <form:input path="salary"/>
+        </div>
+        <div class="inputs">
+            <span>Department</span>
+            <form:select path="department">
+                <form:options items="${employee.departments}"/>
+            </form:select>
+        </div>
+        <div class="inputs">
+            <span>Which car do you want?</span>
+            <form:radiobuttons path="carBrand" items="${employee.carBrands}"/>
+        </div>
+        <div class="inputs">
+            <span>Foreign Languages</span>
+            <form:checkboxes path="languages" items="${employee.languageList}"/>
+        </div>
+
+        <button type="submit">Submit</button>
+    </div>
+
+</form:form>
+
+<style>
+    .inputs{
+        margin-bottom: 15px;
+    }
+    button{
+        max-width: 100px;
+    }
+</style>
 
 </body>
 </html>
