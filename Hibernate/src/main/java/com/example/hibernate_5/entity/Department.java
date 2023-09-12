@@ -19,7 +19,7 @@ public class Department {
     @Column(name = "min_salary")
     private Integer minSalary;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "department", fetch = FetchType.LAZY)
-    private List<Employee> employees ;
+    private List<Employee> employees;
 
     public Department() {
     }
